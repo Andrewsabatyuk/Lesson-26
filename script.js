@@ -26,3 +26,4 @@ showData(pickObj, true);
 
 let omitObj = _.omit(createObj, 'model');
 showData(omitObj, true);
+//also first commit
