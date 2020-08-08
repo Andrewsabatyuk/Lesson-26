@@ -11,6 +11,13 @@ function Car (brandName, model, productionYear){
     this.productionYear = productionYear;
 }
 
+const showMouseCoords = (event) => {
+    document.getElementById('coords').innerHTML = `x:${event.x}; y:${event.y}`;
+    document.getElementById('coords').style = `left:${event.x}px; top:${event.y}px`;
+} 
+
+document.addEventListener('mousemove', (e) => showMouseCoords(e));
+
 let createObj = _.create(Car.prototype, {
     brandName:'Mercedes-Benz',
     model:'C220',
@@ -26,3 +33,4 @@ showData(pickObj, true);
 
 let omitObj = _.omit(createObj, 'model');
 showData(omitObj, true);
+//also first commit
